@@ -3,25 +3,29 @@ import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { link } from 'fs';
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "Full-stack e-commerce application with payment processing",
-    tech: "React, Node.js, MongoDB",
-    image: "https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    title: "YelpCamp Clone",
+    description: "Full-stack API project for campground reviews. Users can create, read, update, and delete campgrounds and reviews after creating their own profiles Uses MongoDB for database storage.",
+    tech: "HTML, CSS, JS, Bootstrap, Express, Node.js, MongoDB",
+    image: "https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    projectLink: "https://github.com/jacjanowski/Yelpcamp_Revised"
   },
   {
-    title: "Social Media Dashboard",
-    description: "Analytics dashboard for social media management",
-    tech: "Next.js, TypeScript, TailwindCSS",
-    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    title: "Movie Database",
+    description: "Movie search application using the TheMovie API to fetch and display movie details based on user queries.",
+    tech: "React, TheMovie API",
+    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    projectLink: "https://github.com/jacjanowski/Movie_API_Project/tree/main/Learn-React-In-One-Project-main"
   },
   {
-    title: "Weather Application",
-    description: "Real-time weather app with location services",
-    tech: "React, Redux, Weather API",
-    image: "https://images.unsplash.com/photo-1527576539890-dfa815648363?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    title: "History Timeline",
+    description: "Gets historical events that happen on a particular day of the year. Find Birthdays, deaths, and Events that happened on that day.",
+    tech: "HTML, CSS, JS, Wikipedia API",
+    image: "https://images.unsplash.com/photo-1527576539890-dfa815648363?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    projectLink: "https://github.com/jacjanowski/History_Timeline_API"
   }
 ];
 
@@ -29,7 +33,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 px-6 md:px-12 lg:px-24 bg-[#222222] text-white">
       <div className="mb-12">
-        <h2 className="text-4xl font-bold text-white mb-2">Projects</h2>
+        <h2 className="text-4xl font-bold text-white mb-2">Web Projects</h2>
         <div className="w-16 h-1 bg-[#F97316]"></div>
       </div>
       
@@ -45,17 +49,17 @@ const Projects = () => {
               <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
               <p className="text-sm text-gray-300 mb-4">{project.description}</p>
               <p className="text-xs text-[#F97316] mb-4">{project.tech}</p>
-              <Button variant="ghost" className="text-white hover:text-[#F97316] group px-6">
+              <a href={project.projectLink} target='_blank'><Button variant="ghost" className="text-white hover:text-[#F97316] group px-6">
                 View Project 
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              </Button></a>
             </CardContent>
           </Card>
         ))}
       </div>
       
       <div className="mt-12 text-center">
-        <Button className="bg-[#F97316] hover:bg-[#F97316]/90 px-6">View All Projects</Button>
+        <a href="https://github.com/jacjanowski" target='_blank'><Button className="bg-[#F97316] hover:bg-[#F97316]/90 px-6">View All Projects</Button></a>
       </div>
     </section>
   );

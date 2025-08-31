@@ -5,29 +5,30 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const highlights = [
-  {
-    title: "Brand Identity",
-    description: "Brand identity designing your distinctive visual voice",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    tags: ["Logo Design", "Brand Strategy"]
-  },
+
   {
     title: "Website Design",
-    description: "Web building an engaging website for your brand",
+    description: "Designing user-friendly, visually appealing, and responsive websites that align with brand identity, UI/UX principles, and modern design trends.",
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
     tags: ["UI/UX", "Responsive"]
   },
   {
-    title: "Development",
-    description: "We craft brands that engage your audience",
+    title: "Custom Development",
+    description: "Creating  HTML5, CSS3, and JavaScript websites along with custom WordPress themes and plugins.",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
     tags: ["Frontend", "Backend"]
+  },
+  {
+    title: "Search Engine Optimization (SEO)",
+    description: "Improving website visibility on search engines through keyword research, on-page optimization, link building, and content strategy.",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    tags: ["Backlinks", "Keyword Research", "On-Page SEO"]
   }
 ];
 
 const Highlights = () => {
   return (
-    <section id="highlights" className="py-20 px-6 md:px-12 lg:px-24 bg-white overflow-hidden">
+    <section id="experience" className="py-20 px-6 md:px-12 lg:px-24 bg-white overflow-hidden">
       <div className="relative">
         <div className="absolute -bottom-20 -left-20 text-[#f0f0f0] text-[180px] md:text-[280px] font-bold leading-none z-0 select-none">
           EXPERTISE
@@ -66,10 +67,7 @@ const Highlights = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-2 text-[#222222]">{highlight.title}</h3>
                   <p className="text-[#555555] mb-4">{highlight.description}</p>
-                  <Button variant="ghost" className="text-[#222222] p-0 hover:text-[#F97316] group">
-                    Learn more
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+
                 </CardContent>
               </Card>
             ))}

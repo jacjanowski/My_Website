@@ -7,8 +7,8 @@ const Header = () => {
   // Stats to display
   const stats = [
     { number: "6+", label: "Years of Experience" },
-    { number: "25+", label: "Projects Completed" },
-    { number: "15+", label: "Satisfied Clients" }
+    { number: "48+", label: "Projects Completed" },
+    { number: "15+", label: "Websites Built" }
   ];
 
   return (
@@ -35,15 +35,15 @@ const Header = () => {
           </p>
           
           <div className="flex flex-wrap gap-4 mb-16">
-            <Button className="bg-[#F97316] hover:bg-[#F97316]/90 text-white px-8 py-6 h-auto text-lg">
+            <a href="#projects"><Button className="bg-[#F97316] hover:bg-[#F97316]/90 text-white px-8 py-6 h-auto text-lg">
               View Projects
-            </Button>
-            <Button 
+            </Button></a>
+            <a href="#contact"><Button 
               variant="outline" 
               className="bg-transparent border-white text-white hover:bg-white hover:text-black px-8 py-6 h-auto text-lg transition-colors"
             >
               Contact Me
-            </Button>
+            </Button></a>
           </div>
         </div>
         

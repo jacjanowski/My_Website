@@ -67,9 +67,9 @@ const NavBar = () => {
                     {link.name}
                   </a>
                 ))}
-                <Button className="mt-4 w-full bg-[#F97316] hover:bg-[#F97316]/90">
+                 <a href="../public/Jacob-Janowski-Resume-2025.pdf" target='_blank'><Button className="mt-4 w-full bg-[#F97316] hover:bg-[#F97316]/90">
                   Resume
-                </Button>
+                </Button></a>
               </div>
             )}
           </>
@@ -86,9 +86,9 @@ const NavBar = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="bg-[#F97316] hover:bg-[#F97316]/90">
+            <a href="../public/Jacob-Janowski-Resume-2025.pdf" target='_blank'><Button className="bg-[#F97316] hover:bg-[#F97316]/90">
               Resume
-            </Button>
+            </Button></a>
           </div>
         )}
       </div>
